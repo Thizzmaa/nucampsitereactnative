@@ -2,7 +2,6 @@ import { StyleSheet, Text, View } from 'react-native';
 import { Card, Icon } from 'react-native-elements';
 
 const RenderCampsite = (props) => {
-
 	const { campsite } = props;
 
 	if (campsite) {
@@ -22,7 +21,7 @@ const RenderCampsite = (props) => {
 					</View>
 				</Card.Image>
 				<Text style={{ margin: 20 }}>{campsite.description}</Text>
-				<Icon 
+				<Icon
 					name={props.isFavorite ? 'heart' : 'heart-o'}
 					type='font-awesome'
 					color='#f50'
@@ -31,7 +30,8 @@ const RenderCampsite = (props) => {
 					onPress={() =>
 						props.isFavorite
 							? console.log('Already set as a favorite')
-							: props.markFavorite()}
+							: props.markFavorite()
+					}
 				/>
 			</Card>
 		);
@@ -43,8 +43,8 @@ const styles = StyleSheet.create({
 	cardContainer: {
 		padding: 0,
 		margin: 0,
-		marginBottom: 20
-	}
+		marginBottom: 20,
+	},
 });
 
 export default RenderCampsite;
