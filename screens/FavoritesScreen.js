@@ -93,10 +93,7 @@ const FavoritesScreen = ({ navigation }) => {
 		);
 	}
 	return (
-		<Animatable.View
-			animation='fadeInRightBig'
-			duration={2000}
-		>
+		<Animatable.View animation='fadeInRightBig' duration={2000}>
 			<FlatList
 				data={campsitesArray.filter((campsite) =>
 					favorites.includes(campsite.id)

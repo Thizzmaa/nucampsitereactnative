@@ -37,7 +37,7 @@ const AboutScreen = () => {
 					<Loading />
 				</Card>
 			</ScrollView>
-		)
+		);
 	}
 	if (partners.errMess) {
 		return (
@@ -55,15 +55,15 @@ const AboutScreen = () => {
 					</Card>
 				</Animatable.View>
 			</ScrollView>
-		)
+		);
 	}
 
 	return (
 		<ScrollView>
 			<Animatable.View
-					animation='fadeInDown'
-					duration={2000}
-					delay={1000}
+				animation='fadeInDown'
+				duration={2000}
+				delay={1000}
 			>
 				<Mission />
 				<Card>
@@ -72,9 +72,14 @@ const AboutScreen = () => {
 					{partners.partnersArray.map((partner) => {
 						return (
 							<ListItem key={partner.id}>
-								<Avatar rounded source={{ uri: baseUrl + partner.image }} />
+								<Avatar
+									rounded
+									source={{ uri: baseUrl + partner.image }}
+								/>
 								<ListItem.Content>
-									<ListItem.Title>{partner.name}</ListItem.Title>
+									<ListItem.Title>
+										{partner.name}
+									</ListItem.Title>
 									<ListItem.Subtitle>
 										{partner.description}
 									</ListItem.Subtitle>
