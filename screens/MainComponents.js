@@ -107,7 +107,7 @@ const ReservationNavigator = () => {
 				name='Reservation'
 				component={ReservationScreen}
 				options={({ navigation }) => ({
-					title: 'Reservatoin Screen',
+					title: 'Reservation Screen',
 					headerLeft: () => (
 						<Icon
 							name='tree'
